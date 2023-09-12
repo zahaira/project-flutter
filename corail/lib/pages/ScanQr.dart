@@ -142,7 +142,7 @@ class _scanState extends State<ScanQr> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => Tickets(),
+                                        builder: (context) => const Tickets(),
                                       ),
                                     );
                                   },
@@ -181,8 +181,6 @@ class _scanState extends State<ScanQr> {
       setState(() {
         getResult = qrCode;
       });
-      print('qr code result!..000');
-      print(qrCode);
     } on PlatformException {
       getResult = 'failed to scan qr code';
     }

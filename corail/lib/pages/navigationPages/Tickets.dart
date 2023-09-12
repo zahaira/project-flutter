@@ -1,7 +1,5 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/ScanQr.dart';
 import 'package:corail/widgets/TicketsListWidget.dart';
-import 'package:corail/widgets/bottom_appbar.dart';
 import 'package:corail/widgets/drawerWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
@@ -27,7 +25,7 @@ class _TicketsState extends State<Tickets> {
       drawer: const DrawerWidget(),
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        title: Text('Mes Tickets'),
+        title: const Text('Mes Tickets'),
         backgroundColor: mainColor,
         elevation: 0,
         centerTitle: true,
@@ -41,7 +39,7 @@ class _TicketsState extends State<Tickets> {
                   noItemsFoundBuilder: (context) => const SizedBox(
                     height: 50,
                     child: Center(
-                      child: Text('Aucun Marque n\a été trouvé'),
+                      child: Text('Aucun Marque na été trouvé'),
                     ),
                   ),
                   suggestionsBoxDecoration: const SuggestionsBoxDecoration(

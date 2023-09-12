@@ -5,7 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 class PubSection extends StatelessWidget {
   final List images;
 
-  PubSection({
+  const PubSection({super.key, 
     required this.images,
   });
 
@@ -25,8 +25,8 @@ class PubSection extends StatelessWidget {
         // height: 500,
         enlargeCenterPage: true,
         autoPlay: true,
-        autoPlayInterval: Duration(seconds: 3),
-        autoPlayAnimationDuration: Duration(milliseconds: 1000),
+        autoPlayInterval: const Duration(seconds: 3),
+        autoPlayAnimationDuration: const Duration(milliseconds: 1000),
         autoPlayCurve: Curves.fastOutSlowIn,
       ),
     );

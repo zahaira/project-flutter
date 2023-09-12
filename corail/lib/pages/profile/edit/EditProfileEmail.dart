@@ -17,7 +17,7 @@ class _EditProfileEmailState extends State<EditProfileEmail> {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               // Navigate back to the previous page.
               Navigator.of(context).pop();
@@ -33,8 +33,8 @@ class _EditProfileEmailState extends State<EditProfileEmail> {
             children: [
               Container(
                 alignment: Alignment.topLeft,
-                margin: EdgeInsets.symmetric(horizontal: 40),
-                child: Text(
+                margin: const EdgeInsets.symmetric(horizontal: 40),
+                child: const Text(
                   'Adresse email',
                   style: TextStyle(
                     fontSize: 25,
@@ -42,11 +42,11 @@ class _EditProfileEmailState extends State<EditProfileEmail> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 35),
+                margin: const EdgeInsets.symmetric(horizontal: 35),
                 child: TextFormField(
                   initialValue: "hamzaryani@gmail.com",
                   validator: (value) {
@@ -73,16 +73,14 @@ class _EditProfileEmailState extends State<EditProfileEmail> {
                   // },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 50),
+                margin: const EdgeInsets.symmetric(horizontal: 50),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(vertical: 12),
-                      primary: mainColor,
-                      onPrimary: Colors.white,
+                      foregroundColor: Colors.white, backgroundColor: mainColor, padding: const EdgeInsets.symmetric(vertical: 12),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
                       )),
@@ -92,50 +90,46 @@ class _EditProfileEmailState extends State<EditProfileEmail> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              content: Text(
+                              content: const Text(
                                   "Etes vous sur vous voulez sauvgarder les modifications?"),
                               actions: [
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    elevation: 0,
-                                    primary: Colors.white,
-                                    onPrimary: mainColor,
+                                    foregroundColor: mainColor, backgroundColor: Colors.white, elevation: 0,
                                   ),
                                   onPressed: () {
                                     // Navigator.of(context).pop();
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Profile()));
+                                            builder: (context) => const Profile()));
                                   },
-                                  child: Text("Sauvgarder"),
+                                  child: const Text("Sauvgarder"),
                                 ),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    elevation: 0,
-                                    primary: Colors.white,
-                                    onPrimary: mainColor,
+                                    foregroundColor: mainColor, backgroundColor: Colors.white, elevation: 0,
                                   ),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
-                                  child: Text("Annuler"),
+                                  child: const Text("Annuler"),
                                 ),
                               ],
                             );
                           });
                     }
                   },
-                  child: Text('Sauvgarder'),
+                  child:const  Text('Sauvgarder'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: RichText(
-                  text: TextSpan(
+                  text: const TextSpan(
                     children: [
                       TextSpan(
                         text: '*Mentions obligatoires.',
@@ -161,7 +155,7 @@ class _EditProfileEmailState extends State<EditProfileEmail> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

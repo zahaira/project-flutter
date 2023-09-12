@@ -9,22 +9,20 @@ class AutoriseNotification extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFFFEFEFD),
+        backgroundColor: const Color(0xFFFEFEFD),
         body: ListView(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
-            Container(
-              child: Image.asset('$pathImages/notify.png'),
-            ),
-            SizedBox(
+            Image.asset('$pathImages/notify.png'),
+            const SizedBox(
               height: 20,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 50),
+              margin: const EdgeInsets.symmetric(horizontal: 50),
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 'Autoriser les notifications',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -32,27 +30,25 @@ class AutoriseNotification extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 12,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 'Soyez alerté sur le statut de vos achats et les informations de vos commerçants favoris.',
                 style: TextStyle(),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 50),
+              margin: const EdgeInsets.symmetric(horizontal: 50),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(vertical: 12),
-                    primary: secondColor,
-                    onPrimary: Colors.white,
+                    foregroundColor: Colors.white, backgroundColor: secondColor, padding: const EdgeInsets.symmetric(vertical: 12),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     )),
@@ -60,13 +56,13 @@ class AutoriseNotification extends StatelessWidget {
                   allowNotification = true;
                   _showBottomSheet(context);
                 },
-                child: Text(
+                child: const Text(
                   'Autoriser',
                   style: TextStyle(fontSize: 16),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
           ],
@@ -79,7 +75,7 @@ class AutoriseNotification extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       builder: (context) {
-        return Container(
+        return const SizedBox(
           height: 80,
           child: Center(
             child: Text('Notification activée avec succès!'),
@@ -89,11 +85,11 @@ class AutoriseNotification extends StatelessWidget {
     );
 
     // Close the bottom sheet after 3 seconds
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => NotificationPage(),
+            builder: (context) => const NotificationPage(),
           ));
     });
   }

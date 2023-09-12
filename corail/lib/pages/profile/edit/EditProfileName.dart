@@ -26,7 +26,7 @@ class _EditProfileNameState extends State<EditProfileName> {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               // Navigate back to the previous page.
               Navigator.of(context).pop();
@@ -43,7 +43,7 @@ class _EditProfileNameState extends State<EditProfileName> {
               Container(
                 alignment: Alignment.topLeft,
                 margin: EdgeInsets.symmetric(horizontal: 40),
-                child: Text(
+                child: const Text(
                   'Identité',
                   style: TextStyle(
                     fontSize: 25,
@@ -51,11 +51,11 @@ class _EditProfileNameState extends State<EditProfileName> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 35),
+                  margin: const EdgeInsets.symmetric(horizontal: 35),
                   child: Row(
                     children: [
                       Icon(
@@ -63,7 +63,7 @@ class _EditProfileNameState extends State<EditProfileName> {
                         color: Colors.grey.shade500,
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 15),
+                        margin: const EdgeInsets.only(left: 15),
                         child: Text(
                           'Civilite *',
                           style: TextStyle(
@@ -73,52 +73,44 @@ class _EditProfileNameState extends State<EditProfileName> {
                     ],
                   )),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 35),
+                margin: const EdgeInsets.symmetric(horizontal: 35),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      child: Row(
-                        children: [
-                          Container(
-                            child: Text('Madame'),
-                          ),
-                          Radio(
-                              value: "female",
-                              groupValue: gender,
-                              onChanged: (val) {
-                                setState(() {
-                                  gender = val;
-                                });
-                              })
-                        ],
-                      ),
+                    Row(
+                      children: [
+                        const Text('Madame'),
+                        Radio(
+                            value: "female",
+                            groupValue: gender,
+                            onChanged: (val) {
+                              setState(() {
+                                gender = val;
+                              });
+                            })
+                      ],
                     ),
-                    Container(
-                      child: Row(
-                        children: [
-                          Container(
-                            child: Text('Monsieur'),
-                          ),
-                          Radio(
-                              value: "male",
-                              groupValue: gender,
-                              onChanged: (val) {
-                                setState(() {
-                                  gender = val;
-                                });
-                              })
-                        ],
-                      ),
+                    Row(
+                      children: [
+                        const Text('Monsieur'),
+                        Radio(
+                            value: "male",
+                            groupValue: gender,
+                            onChanged: (val) {
+                              setState(() {
+                                gender = val;
+                              });
+                            })
+                      ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 35),
+                margin: const EdgeInsets.symmetric(horizontal: 35),
                 child: TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -144,11 +136,11 @@ class _EditProfileNameState extends State<EditProfileName> {
                   // },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 35),
+                margin: const EdgeInsets.symmetric(horizontal: 35),
                 child: TextFormField(
                   validator: (value) {
                     if (value!.isEmpty) {
@@ -164,11 +156,11 @@ class _EditProfileNameState extends State<EditProfileName> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 35),
+                margin: const EdgeInsets.symmetric(horizontal: 35),
                 child: TextFormField(
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -197,16 +189,16 @@ class _EditProfileNameState extends State<EditProfileName> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 22,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 50),
+                margin: const EdgeInsets.symmetric(horizontal: 50),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(vertical: 12),
-                      primary: mainColor,
-                      onPrimary: Colors.white,
+                      foregroundColor: Colors.white,
+                      backgroundColor: mainColor,
+                      padding: const EdgeInsets.symmetric(vertical: 12),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
                       )),
@@ -216,50 +208,51 @@ class _EditProfileNameState extends State<EditProfileName> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              content: Text(
+                              content: const Text(
                                   "Etes vous sur vous voulez sauvgarder les modifications?"),
                               actions: [
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
+                                    foregroundColor: mainColor,
+                                    backgroundColor: Colors.white,
                                     elevation: 0,
-                                    primary: Colors.white,
-                                    onPrimary: mainColor,
                                   ),
                                   onPressed: () {
                                     // Navigator.of(context).pop();
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Profile()));
+                                            builder: (context) =>
+                                                const Profile()));
                                   },
-                                  child: Text("Sauvgarder"),
+                                  child: const Text("Sauvgarder"),
                                 ),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
+                                    foregroundColor: mainColor,
+                                    backgroundColor: Colors.white,
                                     elevation: 0,
-                                    primary: Colors.white,
-                                    onPrimary: mainColor,
                                   ),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
-                                  child: Text("Annuler"),
+                                  child: const Text("Annuler"),
                                 ),
                               ],
                             );
                           });
                     }
                   },
-                  child: Text('SUIVANT'),
+                  child: const Text('SUIVANT'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: RichText(
-                  text: TextSpan(
+                  text: const TextSpan(
                     children: [
                       TextSpan(
                         text: '*Mentions obligatoires.',
@@ -285,7 +278,7 @@ class _EditProfileNameState extends State<EditProfileName> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

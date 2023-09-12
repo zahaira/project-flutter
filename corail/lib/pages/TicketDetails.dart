@@ -34,8 +34,8 @@ class _TicketDetailsState extends State<TicketDetails> {
         appBar: AppBar(
           title: const Text('Details de Votre Ticket'),
           toolbarHeight: 80,
-          backgroundColor: Color(0xff00587a),
-          shape: RoundedRectangleBorder(
+          backgroundColor: const Color(0xff00587a),
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20)),
@@ -47,11 +47,11 @@ class _TicketDetailsState extends State<TicketDetails> {
               Expanded(
                 child: SingleChildScrollView(
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 35, horizontal: 44),
-                    padding: EdgeInsets.only(top: 30, right: 30, left: 30),
+                    margin: const EdgeInsets.symmetric(vertical: 35, horizontal: 44),
+                    padding: const EdgeInsets.only(top: 30, right: 30, left: 30),
                     width: double.infinity,
                     height: 400,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius:
                           BorderRadius.vertical(top: Radius.circular(20)),
@@ -60,11 +60,11 @@ class _TicketDetailsState extends State<TicketDetails> {
                       children: [
                         Row(
                           children: [
-                            Expanded(
+                            const Expanded(
                               flex: 1,
                               child: Icon(Icons.add),
                             ),
-                            Expanded(
+                            const Expanded(
                               flex: 1,
                               child: Icon(Icons.remove),
                             ),
@@ -76,7 +76,7 @@ class _TicketDetailsState extends State<TicketDetails> {
                                   onTap: () => setState(() {
                                     _launched = _launchInBrowser(toLaunch);
                                   }),
-                                  child: MouseRegion(
+                                  child: const MouseRegion(
                                     cursor: SystemMouseCursors.click,
                                     child: Icon(Icons.download),
                                   ),
@@ -86,8 +86,8 @@ class _TicketDetailsState extends State<TicketDetails> {
                           ],
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 10),
-                          constraints: BoxConstraints(
+                          margin: const EdgeInsets.only(top: 10),
+                          constraints: const BoxConstraints(
                             maxHeight: 310,
                           ),
                           child: Image.asset('$pathImages/ticket.jpg'),

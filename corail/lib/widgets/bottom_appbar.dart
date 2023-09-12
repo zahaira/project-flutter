@@ -3,7 +3,6 @@ import 'package:corail/pages/navigationPages/Actualit%C3%A9s.dart';
 import 'package:corail/pages/navigationPages/Historique.dart';
 import 'package:corail/pages/navigationPages/Home.dart';
 import 'package:corail/pages/navigationPages/Statistiques.dart';
-import 'package:corail/pages/navigationPages/Tickets.dart';
 import 'package:flutter/material.dart';
 
 class bottom_appbar extends StatelessWidget {
@@ -19,10 +18,10 @@ class bottom_appbar extends StatelessWidget {
       ),
     );
     return BottomAppBar(
-      shape: CircularNotchedRectangle(),
+      shape: const CircularNotchedRectangle(),
       notchMargin: 8,
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -51,7 +50,7 @@ class bottom_appbar extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Statistiques(),
+                    builder: (context) => const Statistiques(),
                   ),
                 );
               },
@@ -72,7 +71,7 @@ class bottom_appbar extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Actualite(),
+                    builder: (context) => const Actualite(),
                   ),
                 );
               },
@@ -92,7 +91,7 @@ class bottom_appbar extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Historique(),
+                    builder: (context) => const Historique(),
                   ),
                 );
               },

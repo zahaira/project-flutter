@@ -18,16 +18,16 @@ class _NotificationPageState extends State<NotificationPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Notifications'),
+          title: const Text('Notifications'),
           centerTitle: true,
           backgroundColor: mainColor,
         ),
         body: ListView(children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 4, horizontal: 2),
+            margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 2),
             decoration: BoxDecoration(
               color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(20),
@@ -41,10 +41,10 @@ class _NotificationPageState extends State<NotificationPage> {
                 radius: 25,
                 backgroundColor: Colors.grey.shade200,
                 child: Container(
-                    padding: EdgeInsets.all(2),
+                    padding: const EdgeInsets.all(2),
                     child: Image.asset('$pathImages/zara.png')),
               ),
-              title: Text(
+              title: const Text(
                   "Vous avez achetez de chez ZARA un montant de 460,00 dh"),
               trailing: IconButton(
                 icon: favori1 == true
@@ -52,7 +52,7 @@ class _NotificationPageState extends State<NotificationPage> {
                         Icons.favorite,
                         color: Colors.red[600],
                       )
-                    : Icon(Icons.favorite_border),
+                    : const Icon(Icons.favorite_border),
                 onPressed: () {
                   setState(() {
                     favori1 = !favori1;
@@ -62,7 +62,7 @@ class _NotificationPageState extends State<NotificationPage> {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 4, horizontal: 2),
+            margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 2),
             decoration: BoxDecoration(
               color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(20),
@@ -76,7 +76,7 @@ class _NotificationPageState extends State<NotificationPage> {
                 radius: 25,
                 backgroundColor: Colors.grey.shade200,
                 child: Container(
-                    padding: EdgeInsets.all(2),
+                    padding: const EdgeInsets.all(2),
                     child: Image.asset('$pathImages/rocher.png')),
               ),
               title: const Text(

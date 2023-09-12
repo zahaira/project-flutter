@@ -29,14 +29,14 @@ class _BrandDetailsState extends State<BrandDetails> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: DrawerWidget(),
+        drawer: const DrawerWidget(),
         appBar: AppBar(
           toolbarHeight: 65,
           iconTheme: const IconThemeData(color: Colors.black),
           title: SizedBox(
             height: 50,
             width: 150,
-            child: Image.asset('${widget.logo}'),
+            child: Image.asset(widget.logo),
           ),
           backgroundColor: Colors.white,
           centerTitle: true,

@@ -17,16 +17,16 @@ class _FavoriState extends State<Favori> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Mes favoris'),
+          title: const Text('Mes favoris'),
           centerTitle: true,
           backgroundColor: mainColor,
         ),
         body: ListView(children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 4, horizontal: 2),
+            margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 2),
             decoration: BoxDecoration(
               color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(20),
@@ -40,10 +40,10 @@ class _FavoriState extends State<Favori> {
                 radius: 25,
                 backgroundColor: Colors.grey.shade200,
                 child: Container(
-                    padding: EdgeInsets.all(2),
+                    padding: const EdgeInsets.all(2),
                     child: Image.asset('$pathImages/rocher.png')),
               ),
-              title: Text(
+              title: const Text(
                   "Vous avez achetez de chez Yves Rocher un montant de 500,00 dh"),
               trailing: IconButton(
                 icon: favori2 == true
@@ -51,7 +51,7 @@ class _FavoriState extends State<Favori> {
                         Icons.favorite,
                         color: Colors.red[600],
                       )
-                    : Icon(Icons.favorite_border),
+                    : const Icon(Icons.favorite_border),
                 onPressed: () {
                   setState(() {
                     favori2 = !favori2;
@@ -61,7 +61,7 @@ class _FavoriState extends State<Favori> {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 4, horizontal: 2),
+            margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 2),
             decoration: BoxDecoration(
               color: Colors.grey.shade300,
               borderRadius: BorderRadius.circular(20),

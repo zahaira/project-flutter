@@ -24,9 +24,9 @@ class BrandCard extends StatelessWidget {
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           alignment: Alignment.center,
-          margin: EdgeInsets.all(4),
+          margin: const EdgeInsets.all(4),
           width: 90,
           height: 90,
           decoration: BoxDecoration(
@@ -34,7 +34,7 @@ class BrandCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             border: Border.all(color: Colors.grey.shade300),
           ),
-          child: Image.asset("$logo"),
+          child: Image.asset(logo),
         ),
       ),
     );

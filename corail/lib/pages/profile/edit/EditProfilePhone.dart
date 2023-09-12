@@ -18,7 +18,7 @@ class _EditProfilePhoneState extends State<EditProfilePhone> {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               // Navigate back to the previous page.
               Navigator.of(context).pop();
@@ -34,8 +34,8 @@ class _EditProfilePhoneState extends State<EditProfilePhone> {
             children: [
               Container(
                 alignment: Alignment.topLeft,
-                margin: EdgeInsets.symmetric(horizontal: 40),
-                child: Text(
+                margin: const EdgeInsets.symmetric(horizontal: 40),
+                child: const Text(
                   'Téléphone',
                   style: TextStyle(
                     fontSize: 25,
@@ -43,7 +43,7 @@ class _EditProfilePhoneState extends State<EditProfilePhone> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
@@ -59,7 +59,7 @@ class _EditProfilePhoneState extends State<EditProfilePhone> {
                   },
                   initialValue: "0648985541",
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     icon: Icon(Icons.phone),
                     labelText: 'Téléphone *',
                     prefixIcon: CountryCodePicker(
@@ -79,16 +79,14 @@ class _EditProfilePhoneState extends State<EditProfilePhone> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 50),
+                margin: const EdgeInsets.symmetric(horizontal: 50),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(vertical: 12),
-                      primary: mainColor,
-                      onPrimary: Colors.white,
+                      foregroundColor: Colors.white, backgroundColor: mainColor, padding: const EdgeInsets.symmetric(vertical: 12),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
                       )),
@@ -98,29 +96,12 @@ class _EditProfilePhoneState extends State<EditProfilePhone> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              content: Text(
+                              content: const Text(
                                   "Etes vous sur vous voulez sauvgarder les modifications?"),
                               actions: [
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    elevation: 0,
-                                    primary: Colors.white,
-                                    onPrimary: mainColor,
-                                  ),
-                                  onPressed: () {
-                                    // Navigator.of(context).pop();
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => Profile()));
-                                  },
-                                  child: Text("Sauvgarder"),
-                                ),
-                                ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    elevation: 0,
-                                    primary: Colors.white,
-                                    onPrimary: mainColor,
+                                    foregroundColor: mainColor, backgroundColor: Colors.white, elevation: 0,
                                   ),
                                   onPressed: () {
                                     // Navigator.of(context).pop();
@@ -128,25 +109,39 @@ class _EditProfilePhoneState extends State<EditProfilePhone> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                EditProfilePhone()));
+                                                const Profile()));
                                   },
-                                  child: Text("Annuler"),
+                                  child: const Text("Sauvgarder"),
+                                ),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    foregroundColor: mainColor, backgroundColor: Colors.white, elevation: 0,
+                                  ),
+                                  onPressed: () {
+                                    // Navigator.of(context).pop();
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const EditProfilePhone()));
+                                  },
+                                  child: const Text("Annuler"),
                                 ),
                               ],
                             );
                           });
                     }
                   },
-                  child: Text('Sauvgarder'),
+                  child: const Text('Sauvgarder'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: RichText(
-                  text: TextSpan(
+                  text: const TextSpan(
                     children: [
                       TextSpan(
                         text: '*Mentions obligatoires.',
@@ -172,7 +167,7 @@ class _EditProfilePhoneState extends State<EditProfilePhone> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

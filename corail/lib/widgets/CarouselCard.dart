@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CarouselCard extends StatelessWidget {
   final String imageUrl;
 
-  CarouselCard({
+  const CarouselCard({super.key, 
     required this.imageUrl,
   });
 

@@ -21,7 +21,7 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
       child: Scaffold(
         appBar: AppBar(
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               // Navigate back to the previous page.
               Navigator.of(context).pop();
@@ -37,8 +37,8 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
             children: [
               Container(
                 alignment: Alignment.topLeft,
-                margin: EdgeInsets.symmetric(horizontal: 40),
-                child: Text(
+                margin: const EdgeInsets.symmetric(horizontal: 40),
+                child: const Text(
                   'Adresse postale',
                   style: TextStyle(
                     fontSize: 25,
@@ -46,11 +46,11 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 35),
+                margin: const EdgeInsets.symmetric(horizontal: 35),
                 child: TextFormField(
                   initialValue: "rue farah",
                   validator: (value) {
@@ -77,11 +77,11 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
                   // },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 35),
+                margin: const EdgeInsets.symmetric(horizontal: 35),
                 child: CSCPicker(
                   showStates: true,
                   showCities: true,
@@ -113,14 +113,14 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 50),
+                margin: const EdgeInsets.symmetric(horizontal: 50),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(vertical: 12),
+                      padding: const EdgeInsets.symmetric(vertical: 12),
                       backgroundColor: mainColor,
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
@@ -132,50 +132,51 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              content: Text(
+                              content: const Text(
                                   "Etes vous sur vous voulez sauvgarder les modifications?"),
                               actions: [
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
+                                    foregroundColor: mainColor,
+                                    backgroundColor: Colors.white,
                                     elevation: 0,
-                                    primary: Colors.white,
-                                    onPrimary: mainColor,
                                   ),
                                   onPressed: () {
                                     // Navigator.of(context).pop();
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Profile()));
+                                            builder: (context) =>
+                                                const Profile()));
                                   },
-                                  child: Text("Sauvgarder"),
+                                  child: const Text("Sauvgarder"),
                                 ),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
+                                    foregroundColor: mainColor,
+                                    backgroundColor: Colors.white,
                                     elevation: 0,
-                                    primary: Colors.white,
-                                    onPrimary: mainColor,
                                   ),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
-                                  child: Text("Annuler"),
+                                  child: const Text("Annuler"),
                                 ),
                               ],
                             );
                           });
                     }
                   },
-                  child: Text('Sauvgarder'),
+                  child: const Text('Sauvgarder'),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: RichText(
-                  text: TextSpan(
+                  text: const TextSpan(
                     children: [
                       TextSpan(
                         text: '*Mentions obligatoires.',
@@ -201,7 +202,7 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

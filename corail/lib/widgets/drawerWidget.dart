@@ -1,5 +1,5 @@
-import 'package:corail/Favori.dart';
 import 'package:corail/common/variable.dart';
+import 'package:corail/pages/Favori.dart';
 import 'package:corail/pages/authentification/FirstPage.dart';
 import 'package:corail/pages/navigationPages/Home.dart';
 import 'package:corail/pages/navigationPages/Tickets.dart';
@@ -15,7 +15,7 @@ class DrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         children: [
           Column(
             children: [
@@ -35,7 +35,7 @@ class DrawerWidget extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Profile()));
+                                  builder: (context) => const Profile()));
                         },
                         child: CircleAvatar(
                           radius: 48,
@@ -194,7 +194,7 @@ class DrawerWidget extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Favori()));
+                      MaterialPageRoute(builder: (context) => const Favori()));
                 },
               ),
               ListTile(
