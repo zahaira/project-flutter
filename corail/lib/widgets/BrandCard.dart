@@ -1,5 +1,4 @@
-import 'package:corail/common/variable.dart';
-import 'package:corail/pages/BrandDetails.dart';
+import 'package:corail/pages/brandDetails.dart';
 import 'package:flutter/material.dart';
 
 class BrandCard extends StatelessWidget {

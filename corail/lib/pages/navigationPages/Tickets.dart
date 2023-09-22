@@ -1,5 +1,5 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/widgets/TicketsListWidget.dart';
+import 'package:corail/widgets/ticketsListWidget.dart';
 import 'package:corail/widgets/drawerWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';

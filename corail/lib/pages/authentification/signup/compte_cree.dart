@@ -1,5 +1,5 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/navigationPages/Home.dart';
+import 'package:corail/pages/navigationPages/home.dart';
 import 'package:flutter/material.dart';
 
 class CompteCree extends StatelessWidget {
@@ -7,8 +7,7 @@ class CompteCree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
@@ -79,7 +78,7 @@ class CompteCree extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      
     );
   }
 }

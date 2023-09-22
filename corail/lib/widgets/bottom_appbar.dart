@@ -1,8 +1,8 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/navigationPages/Actualit%C3%A9s.dart';
-import 'package:corail/pages/navigationPages/Historique.dart';
-import 'package:corail/pages/navigationPages/Home.dart';
-import 'package:corail/pages/navigationPages/Statistiques.dart';
+import 'package:corail/pages/navigationPages/actualites.dart';
+import 'package:corail/pages/navigationPages/historique.dart';
+import 'package:corail/pages/navigationPages/home.dart';
+import 'package:corail/pages/navigationPages/statistiques.dart';
 import 'package:flutter/material.dart';
 
 class bottom_appbar extends StatelessWidget {

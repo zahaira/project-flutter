@@ -180,8 +180,7 @@ class _DefinirPwState extends State<DefinirPw> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return  Scaffold(
         body: Form(
           key: formKey,
           child: ListView(
@@ -309,7 +308,7 @@ class _DefinirPwState extends State<DefinirPw> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

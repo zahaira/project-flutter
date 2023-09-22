@@ -20,8 +20,7 @@ class _QuiVousState extends State<QuiVous> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return  Scaffold(
         body: Form(
           key: formKey,
           child: ListView(
@@ -275,7 +274,7 @@ class _QuiVousState extends State<QuiVous> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

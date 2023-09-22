@@ -12,12 +12,12 @@ class Statistiques extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const ScanQr(),
-            ),
-          );
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(
+          //     builder: (context) => const ScanQr(),
+          //   ),
+          // );
         },
         backgroundColor: mainColor,
         child: Image.asset('$pathImages/scan.png'),

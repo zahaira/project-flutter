@@ -19,8 +19,7 @@ class _Dite_plusState extends State<Dite_plus> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: Form(
           key: formKey,
           child: ListView(
@@ -215,7 +214,7 @@ class _Dite_plusState extends State<Dite_plus> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

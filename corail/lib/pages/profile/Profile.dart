@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/authentification/FirstPage.dart';
+import 'package:corail/pages/authentification/firstPage.dart';
 import 'package:corail/pages/notifications/AutoriseNotification.dart';
 import 'package:corail/pages/notifications/NotificationPage.dart';
-import 'package:corail/pages/profile/edit/EditProfileCodePostale.dart';
-import 'package:corail/pages/profile/edit/EditProfileEmail.dart';
-import 'package:corail/pages/profile/edit/EditProfileName.dart';
-import 'package:corail/pages/profile/edit/EditProfilePhone.dart';
+import 'package:corail/pages/profile/edit/editProfileCodePostale.dart';
+import 'package:corail/pages/profile/edit/editProfileEmail.dart';
+import 'package:corail/pages/profile/edit/editProfileName.dart';
+import 'package:corail/pages/profile/edit/editProfilePhone.dart';
 import 'package:corail/widgets/DrawerWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -29,8 +29,7 @@ class _ProfileState extends State<Profile> {
     final top = coverHeight - profileHeight / 2;
     final bottom = profileHeight / 2;
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         drawer: const DrawerWidget(),
         key: scaffoldKey,
         body: ListView(
@@ -253,7 +252,7 @@ class _ProfileState extends State<Profile> {
             ),
           ],
         ),
-      ),
+      
     );
   }
 

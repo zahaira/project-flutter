@@ -1,4 +1,4 @@
-import 'package:corail/pages/LogoAnimation.dart';
+import 'package:corail/pages/logoAnimation.dart';
 import 'package:flutter/material.dart';
 
 void main() {

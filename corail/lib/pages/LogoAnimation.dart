@@ -1,5 +1,5 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/authentification/FirstPage.dart';
+import 'package:corail/pages/authentification/firstPage.dart';
 import 'package:flutter/material.dart';
 
 class LogoAnimation extends StatefulWidget {
@@ -33,9 +33,14 @@ class _LogoAnimationState extends State<LogoAnimation>
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: GestureDetector(
+    return  GestureDetector(
         onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => const FisrtPage()));
@@ -57,7 +62,7 @@ class _LogoAnimationState extends State<LogoAnimation>
             ),
           ),
         ),
-      ),
+      
     );
   }
 }

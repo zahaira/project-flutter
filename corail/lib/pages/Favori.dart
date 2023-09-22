@@ -14,8 +14,7 @@ class _FavoriState extends State<Favori> {
   bool favori4 = true;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text('Mes favoris'),
           centerTitle: true,
@@ -138,7 +137,7 @@ class _FavoriState extends State<Favori> {
             ),
           ),
         ]),
-      ),
+      
     );
   }
 }

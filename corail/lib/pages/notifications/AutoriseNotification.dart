@@ -7,8 +7,7 @@ class AutoriseNotification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         backgroundColor: const Color(0xFFFEFEFD),
         body: ListView(
           children: [
@@ -66,7 +65,7 @@ class AutoriseNotification extends StatelessWidget {
               height: 30,
             ),
           ],
-        ),
+        
       ),
     );
   }

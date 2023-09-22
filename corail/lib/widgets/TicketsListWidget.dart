@@ -1,5 +1,5 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/TicketDetails.dart';
+import 'package:corail/pages/ticketDetails.dart';
 import 'package:flutter/material.dart';
 
 class TicketsListWidget extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/ScanQr.dart';
+// import 'package:corail/pages/ScanQr.dart';
 import 'package:corail/widgets/bottom_appbar.dart';
 import 'package:corail/widgets/drawerWidget.dart';
 import 'package:flutter/material.dart';
@@ -35,12 +35,12 @@ class _ActualiteState extends State<Actualite> {
       drawerScrimColor: Colors.transparent,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const ScanQr(),
-            ),
-          );
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(
+          //     builder: (context) => const ScanQr(),
+          //   ),
+          // );
         },
         backgroundColor: mainColor,
         splashColor: secondColor,

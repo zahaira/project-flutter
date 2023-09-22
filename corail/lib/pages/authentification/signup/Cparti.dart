@@ -17,8 +17,7 @@ class _CpartiState extends State<Cparti> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return  Scaffold(
         body: Form(
           key: formKey,
           child: ListView(
@@ -216,7 +215,7 @@ class _CpartiState extends State<Cparti> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

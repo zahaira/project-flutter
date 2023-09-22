@@ -8,8 +8,7 @@ class Codeactivation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return  Scaffold(
         body: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
@@ -207,7 +206,7 @@ class Codeactivation extends StatelessWidget {
             ),
           ],
         ),
-      ),
+    
     );
   }
 }

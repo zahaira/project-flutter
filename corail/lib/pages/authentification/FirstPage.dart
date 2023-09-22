@@ -1,6 +1,6 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/authentification/signin/SignIn.dart';
-import 'package:corail/pages/authentification/signup/QuiVous.dart';
+import 'package:corail/pages/authentification/signin/signIn.dart';
+import 'package:corail/pages/authentification/signup/quiVous.dart';
 import 'package:flutter/material.dart';
 
 class FisrtPage extends StatelessWidget {
@@ -8,8 +8,7 @@ class FisrtPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return  Scaffold(
         body: Center(
           child: ListView(
             shrinkWrap: true,
@@ -124,7 +123,7 @@ class FisrtPage extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

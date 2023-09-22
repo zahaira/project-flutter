@@ -27,8 +27,7 @@ class _BrandDetailsState extends State<BrandDetails> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         drawer: const DrawerWidget(),
         appBar: AppBar(
           toolbarHeight: 65,
@@ -187,7 +186,7 @@ class _BrandDetailsState extends State<BrandDetails> {
             ),
           ],
         ),
-      ),
+      
     );
   }
 }

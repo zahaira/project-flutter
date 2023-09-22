@@ -9,18 +9,17 @@ class Historique extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         bottomNavigationBar: const bottom_appbar(page: 'Historique'),
         extendBody: true,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScanQr(),
-              ),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => const ScanQr(),
+            //   ),
+            // );
           },
           backgroundColor: mainColor,
           splashColor: secondColor,
@@ -34,7 +33,7 @@ class Historique extends StatelessWidget {
           centerTitle: true,
           backgroundColor: mainColor,
         ),
-      ),
+      
     );
   }
 }

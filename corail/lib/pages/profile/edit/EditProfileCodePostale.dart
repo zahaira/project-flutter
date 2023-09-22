@@ -17,8 +17,7 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
   String? selectedCity = "";
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
@@ -208,7 +207,7 @@ class _EditProfileCodePostaleState extends State<EditProfileCodePostale> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

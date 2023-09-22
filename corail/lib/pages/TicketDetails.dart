@@ -1,9 +1,7 @@
-import 'dart:io';
 
 import 'package:corail/common/variable.dart';
 import 'package:flutter/material.dart';
 
-import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class TicketDetails extends StatefulWidget {
@@ -29,8 +27,7 @@ class _TicketDetailsState extends State<TicketDetails> {
   Widget build(BuildContext context) {
     final Uri toLaunch =
         Uri(scheme: 'https', host: 'chocolate-shena-28.tiiny.site', path: '/');
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text('Details de Votre Ticket'),
           toolbarHeight: 80,
@@ -100,7 +97,7 @@ class _TicketDetailsState extends State<TicketDetails> {
             ],
           ),
         ),
-      ),
+   
     );
   }
 }

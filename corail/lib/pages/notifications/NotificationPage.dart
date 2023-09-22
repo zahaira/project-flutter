@@ -15,8 +15,7 @@ class _NotificationPageState extends State<NotificationPage> {
   bool favori4 = false;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           title: const Text('Notifications'),
           centerTitle: true,
@@ -174,7 +173,7 @@ class _NotificationPageState extends State<NotificationPage> {
             ),
           ),
         ]),
-      ),
+    
     );
   }
 }

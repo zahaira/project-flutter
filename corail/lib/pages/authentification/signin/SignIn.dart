@@ -1,5 +1,5 @@
 import 'package:corail/common/variable.dart';
-import 'package:corail/pages/navigationPages/Home.dart';
+import 'package:corail/pages/navigationPages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 
@@ -17,8 +17,7 @@ class _FirstSignInState extends State<FirstSignIn>{
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         body: Form(
           key: formKey,
           child: ListView(
@@ -160,7 +159,7 @@ class _FirstSignInState extends State<FirstSignIn>{
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

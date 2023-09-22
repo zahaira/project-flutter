@@ -15,20 +15,19 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         extendBody: true,
         drawerScrimColor: Colors.transparent,
         drawer: const DrawerWidget(),
         key: scaffoldKey,
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScanQr(),
-              ),
-            );
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (context) => const ScanQr(),
+            //   ),
+            // );
           },
           backgroundColor: mainColor,
           splashColor: secondColor,
@@ -153,14 +152,7 @@ class Home extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => SafeArea(
-                                        child: Scaffold(
-                                      body: BrandList(category: 'Vêtements'),
-                                    )),
-                                  ));
+                             
                             },
                             child: Container(
                               padding: const EdgeInsets.only(right: 20),
@@ -188,13 +180,7 @@ class Home extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SafeArea(
-                                              child: Scaffold(
-                                            body: BrandList(category: 'Beauté'),
-                                          ))));
+                              
                             },
                             child: Container(
                               padding: const EdgeInsets.only(right: 20),
@@ -222,14 +208,14 @@ class Home extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SafeArea(
-                                              child: Scaffold(
-                                            body: BrandList(
-                                                category: 'Alimentation'),
-                                          ))));
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //         builder: (context) => SafeArea(
+                              //                 child: Scaffold(
+                              //               body: BrandList(
+                              //                   category: 'Alimentation'),
+                              //             ))));
                             },
                             child: Container(
                               padding: const EdgeInsets.only(right: 20),
@@ -257,15 +243,15 @@ class Home extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SafeArea(
-                                              child: Scaffold(
-                                            body: BrandList(
-                                                category:
-                                                    'Mobilier et ameublement'),
-                                          ))));
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //         builder: (context) => SafeArea(
+                              //                 child: Scaffold(
+                              //               body: BrandList(
+                              //                   category:
+                              //                       'Mobilier et ameublement'),
+                              //             ))));
                             },
                             child: Container(
                               padding: const EdgeInsets.only(right: 20),
@@ -292,7 +278,7 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      
     );
   }
 }

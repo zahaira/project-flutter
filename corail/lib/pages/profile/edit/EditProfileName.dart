@@ -22,8 +22,7 @@ class _EditProfileNameState extends State<EditProfileName> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
@@ -284,7 +283,7 @@ class _EditProfileNameState extends State<EditProfileName> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

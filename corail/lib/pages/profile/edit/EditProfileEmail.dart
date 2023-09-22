@@ -13,8 +13,7 @@ class _EditProfileEmailState extends State<EditProfileEmail> {
   final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
@@ -161,7 +160,7 @@ class _EditProfileEmailState extends State<EditProfileEmail> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }
