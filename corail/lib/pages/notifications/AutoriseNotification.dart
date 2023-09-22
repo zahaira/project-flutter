@@ -81,15 +81,10 @@ class AutoriseNotification extends StatelessWidget {
           ),
         );
       },
-    );
-
-    // Close the bottom sheet after 3 seconds
-    Future.delayed(const Duration(seconds: 1), () {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const NotificationPage(),
-          ));
-    });
+    ).then((value) => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const NotificationPage(),
+        )));
   }
 }
